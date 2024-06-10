@@ -14,7 +14,7 @@ pipeline {
                     }
 
                     steps {
-                        bat label: "Export ISX Assets for Compliance Check", script: "C:/MettleCI/cli/mettleci isx export -domain 10.1.102.37:9446 -server IIS-DATASTAGE -username hieu.vc -password 12345678 -project test1 -jobname .*t1.* -location C:/MettleCi/cli/export-files" 
+                        bat label: "Export ISX Assets for Compliance Check", script: "C:/MettleCI/cli/mettleci isx export -domain 10.1.102.37:9446 -server IIS-DATASTAGE -username hieu.vc -password 12345678 -project test1 -jobname .*demo_success_case.* -location C:/MettleCi/cli/export-files" 
                         bat label: "Run Compliance Check on Jobs", script: "C:/MettleCI/cli/mettleci compliance test -rules C:/Users/hieu.vc/Downloads/repo_MettleCI_Demo-main/MB_MettleCI_Demo-main/compliance/compliance-mettleci -assets C:/MettleCi/cli/export-files/Jobs -report C:/MettleCi/cli/compliance_report_warn.xml -junit -include-job-in-test-name"
                     }
                 }
