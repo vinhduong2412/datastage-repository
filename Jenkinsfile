@@ -12,10 +12,6 @@ pipeline {
                     agent {
                         label "mettleci"
                     }
-                    
-                    when {
-                        branch 'product'
-                    }
 
                     steps {
                         bat label: "Export ISX Assets for Compliance Check", script: "C:/MettleCI/cli/mettleci isx export -domain 10.1.102.37:9446 -server IIS-DATASTAGE -username hieu.vc -password 12345678 -project test1 -jobname .*demo_success_case.* -location C:/MettleCi/cli/export-files" 
@@ -55,10 +51,6 @@ pipeline {
                     agent {
                         label "mettleci"
                     }
-                    
-                    when {
-                        branch 'product'
-                    }
 
                     steps {
                         bat label: "Generate Unit Test Specs", script: "C:/MettleCI/cli/mettleci unittest generate -assets C:/MettleCi/cli/export-files/Jobs -specs C:/MettleCi/cli/test-specs"
@@ -76,10 +68,6 @@ pipeline {
 
                     agent {
                         label "mettleci"
-                    }
-                    
-                    when {
-                        branch 'product'
                     }
 
                     steps {   
