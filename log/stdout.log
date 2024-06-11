@@ -1,0 +1,8 @@
+21:59:28,830  INFO Shell:182 - MettleCI Command Line (build 161)
+21:59:28,841  INFO Shell:183 - (C) 2018-2022 Data Migrators Pty Ltd
+21:59:30,344  INFO Shell:179 - isx export (v1.0-575)
+21:59:30,401  INFO Command:19 - Analyzing IIS-DATASTAGE/test1
+21:59:36,329  INFO Command:19 - Exporting [.*demo_failed_case.*] from repository...
+21:59:36,329  INFO Command:19 - Exporting DataStage assets...
+21:59:41,927  INFO Command:19 -  * Export 'IIS-DATASTAGE/test1/Jobs/demo_failed_case.pjb' - COMPLETED
+21:59:41,927  INFO Command:19 - Export complete
