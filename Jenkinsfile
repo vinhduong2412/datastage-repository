@@ -54,7 +54,8 @@ pipeline {
 
                     steps {
                         bat label: "Generate Unit Test Specs", script: "C:/MettleCI/cli/mettleci unittest generate -assets C:/MettleCi/cli/export-files/Jobs -specs C:/MettleCi/cli/test-specs"
-                        bat label: "Run Unit Tests", script: "cd C:/IBM/InformationServer/Clients/Classic & C:/MettleCI/cli/mettleci unittest test -domain 10.1.102.37:9446 -server IIS-DATASTAGE -username hieu.vc -password 12345678 -project test1 -specs C:/MettleCi/cli/test-specs -reports C:/MettleCi/cli/test-report -project-cache -ignore-test-failures"  
+                        script: "cd C:/IBM/InformationServer/Clients/Classic"
+                        bat label: "Run Unit Tests", script: "C:/MettleCI/cli/mettleci unittest test -domain 10.1.102.37:9446 -server IIS-DATASTAGE -username hieu.vc -password 12345678 -project test1 -specs C:/MettleCi/cli/test-specs -reports C:/MettleCi/cli/test-report -project-cache -ignore-test-failures"  
                     }
                 }
             }
@@ -71,7 +72,7 @@ pipeline {
                     }
 
                     steps {   
-                        bat label: "Import Datastage Jobs", script: "& cd C:/IBM/InformationServer/Clients/istools/cli & C:/MettleCI/cli/mettleci isx import -domain 10.1.102.28:9446 -username hieu.vc -password 12345678 -server CICD3 -project dstage1 -location C:/MettleCi/cli/export-files"
+                        bat label: "Import Datastage Jobs", script: "cd C:/IBM/InformationServer/Clients/istools/cli & C:/MettleCI/cli/mettleci isx import -domain 10.1.102.28:9446 -username hieu.vc -password 12345678 -server CICD3 -project dstage1 -location C:/MettleCi/cli/export-files"
 
                     }
                 }
