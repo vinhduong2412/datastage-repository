@@ -6,3 +6,10 @@
 21:59:36,329  INFO Command:19 - Exporting DataStage assets...
 21:59:41,927  INFO Command:19 -  * Export 'IIS-DATASTAGE/test1/Jobs/demo_failed_case.pjb' - COMPLETED
 21:59:41,927  INFO Command:19 - Export complete
+15:33:35,325  INFO Shell:182 - MettleCI Command Line (build 161)
+15:33:35,329  INFO Shell:183 - (C) 2018-2022 Data Migrators Pty Ltd
+15:33:36,899  INFO Shell:179 - unittest test (v1.0-374)
+15:33:36,974  INFO Command:19 - Loading Unit Test Specifications from 'C:\MettleCi\cli\test-specs'
+15:33:37,409  INFO Command:19 - Reading IIS-DATASTAGE/test1
+15:33:43,197  INFO Command:19 - Executing Tests with 4 concurrent jobs...
+15:33:45,778  INFO Command:19 -  * Test demo_success_case/demo_success_case - ERROR
